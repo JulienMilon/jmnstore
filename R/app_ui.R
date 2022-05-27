@@ -3,16 +3,28 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @import bslib
+#' @import shinybusy
+#'
+#'
+#'
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h1("jmnstore")
-    )
+    # shinybusy::busy_start_up(
+    #   loader = shinybusy::spin_epic("semipolar", color = "#4195DB"),
+    #   mode = "auto",
+    #   #text = "Loading...",
+    #   timeout = 1000,
+    #   color = "#4195DB",
+    #   background = "#FFF"
+    # ),
+    uiOutput("page")
   )
+
 }
 
 #' Add external Resources to the Application
