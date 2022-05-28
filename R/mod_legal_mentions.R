@@ -10,6 +10,7 @@
 mod_legal_mentions_ui <- function(id, r){
   ns <- NS(id)
   tagList(
+    h4("Test")
 
   )
 }
