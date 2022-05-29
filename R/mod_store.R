@@ -19,8 +19,8 @@ mod_store_ui <- function(id, r){
                 ),
             div( class="position-absolute absolute-bottom justify-content-start",style="width:100%; bottom:2em;",
                  div(class="col-sm-4 offset-md-2", style="color:#B95833;",
-                   h1(class="fw-bold","jmilon-tech Store"),
-                   tags$p(class="fw-bold fs-4", "Espace rassemblant l’ensemble des interfaces,développées par ma personne Julien MILON,autour des data sciences dans le sports mais aussi la santé. ")
+                   h1(class="fw-bold",r$vitrine_title),
+                   tags$p(class="fw-bold fs-4", r$vitrine_small_description)
                  )
             )
         )
