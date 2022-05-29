@@ -17,6 +17,9 @@ app_server <- function(input, output, session) {
 
   r$app_title <- "jmnstore"
 
+  r$vitrine_title <- "jmilon-tech Store"
+  r$vitrine_small_description <- "Espace rassemblant l’ensemble des interfaces, développées par moi-même Julien MILON, autour des data sciences dans le sports mais aussi la santé."
+
   r$theme <- bslib::bs_theme(
     version=5,
     bootswatch = "flatly",
