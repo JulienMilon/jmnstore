@@ -2,7 +2,9 @@
 
 export(run_app)
 import(bslib)
+import(googleLanguageR)
 import(shiny)
+import(shiny.i18n)
 import(shinybusy)
 importFrom(golem,activate_js)
 importFrom(golem,add_resource_path)

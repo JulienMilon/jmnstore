@@ -8,7 +8,7 @@ app_server <- function(input, output, session) {
 
 
   Sys.getenv()
-  Sys.setlocale("LC_ALL", "fr_FR.UTF-8")
+  #Sys.setlocale("LC_ALL", "fr_FR.UTF-8")
   Sys.setenv(no_proxy="localhost,127.0.0.1")
 
 
@@ -17,8 +17,14 @@ app_server <- function(input, output, session) {
 
   r$app_title <- "jmnstore"
 
+  # setting up credentials to google cloud API (see more in googleLanguageR docs)
+  #r$i18n <- Translator$new(translation_csvs_path = "./inst/app/www/translation/")
+  #r$i18n$set_translation_language("Français")
+
+
+
   r$vitrine_title <- "jmilon-tech Store"
-  r$vitrine_small_description <- "Espace rassemblant l’ensemble des interfaces, développées par moi-même Julien MILON, autour des data sciences dans le sports mais aussi la santé."
+  r$vitrine_small_description <- "Espace rassemblant l'ensemble des interfaces développées par moi-même Julien MILON autour des Data Sciences dans le Sport mais aussi la Santé."
 
   r$theme <- bslib::bs_theme(
     version=5,
