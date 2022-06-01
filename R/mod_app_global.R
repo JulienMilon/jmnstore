@@ -56,7 +56,19 @@ mod_app_global_ui <- function(id, r){
     tags$head(
       tags$style(".container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
      padding-left: 0px;
-     padding-right: 0px;}")
+     padding-right: 0px;}
+
+     .modal-body {
+            position: relative;
+            overflow-y: auto;
+            margin: 0 ;
+            padding: 0;
+      }
+      .modal-content{
+            padding: 0;
+            margin: 0;
+      }"
+                 )
     ),
 
 

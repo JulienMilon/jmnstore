@@ -17,27 +17,38 @@ app_server <- function(input, output, session) {
 
   r$app_title <- "jmnstore"
 
-  # setting up credentials to google cloud API (see more in googleLanguageR docs)
-  #r$i18n <- Translator$new(translation_csvs_path = "./inst/app/www/translation/")
-  #r$i18n$set_translation_language("Français")
+
+  ### Global text showcase part ====
+  r$showcase_title <- "jmilon-tech Store"
+  r$showcase_small_description <- "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé."
+
+  ### App part ====
+
+      ### App number 1
+          ### Thumbnail
+  r$app1 <- app_param(thumbnail_img = "www/Sans titre (2).png",
+                 thumbnail_title = "Application 1 FR",
+                 thumbnail_small_describe = "Test pour appli 1 FR",
+                 #categorie = c(1,2),
+                 modal_img = "www/chest_robot.jpg",
+                 modal_title = "Application 1 FR"
+  )
+  #r$app1$thumbnail_title <- "Application 1 FR"
+  #r$app1$thumbnail_small_describe <- "Test pour appli 1 FR"
+
+  #r$app1$categorie <- c(1,2)
+
+  #r$app1$modal_img <- "www/chest_robot.jpg"
+  #r$app1$modal_title <-"Application 1 FR"
 
 
-  ### Partie texte global Vitrine ====
-  r$vitrine_title <- "jmilon-tech Store"
-  r$vitrine_small_description <- "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé."
-
-  ### Partie application ====
-  # Application numéro 1
-  r$app1$img <- "www/Sans titre (2).png"
-  r$app1$title <- "Application 1 FR"
-  r$app1$small_describe <- "Test pour appli 1 FR"
 
 
   ### Theme ====
   r$theme <- bslib::bs_theme(
     version=5,
     bootswatch = "flatly",
-    bg = "#E8E8E8",
+    bg = "#D5D5D5",
     fg = "#575757",
     primary = "#293173",
     secondary = "#757575",

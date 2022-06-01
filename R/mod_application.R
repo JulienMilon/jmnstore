@@ -10,20 +10,19 @@
 mod_application_ui <- function(id, r, app){
   ns <- NS(id)
   tagList(
+
     div(class="col",
-        div(class="card h-100 text-center justify-content-center",
-            img(src=app$img,
-                class="card-img-top text-center",
-                style="height:15em;"# width:10em;"
-            ),
-            div(class="card-body",
-              h5(class="card-title", textOutput(ns("app_title"))),
-              div(class="card-text", textOutput(ns("app_small_describe")))
-            )
+        tags$button(id=ns("thumbnail"),type="button",class="card h-100 text-center justify-content-center bg-light shadow action-button", #"data-toggle"="modal", ou tags$button
+                img(src=app$thumbnail_img,
+                    class="card-img-top text-center",
+                    style="height:15em;"# width:10em;"
+                ),
+                div(class="card-body justify-content-center",
+                  h5(class="card-title", textOutput(ns("app_title"))),
+                  div(class="card-text", textOutput(ns("app_small_describe"))),
+                )
         )
-
     )
-
   )
 }
 
@@ -39,12 +38,51 @@ mod_application_server <- function(id, r, i18n_r, app, input_app_global){ #, res
       #print(app$small_describe)
 
       observeEvent(input_app_global[["selected_language"]], {
-        print("Change Language")
+        #print("Change Language")
 
-        output$app_title <- renderText({ i18n_r()$t(app$title) })
-        output$app_small_describe <- renderText({ i18n_r()$t(app$small_describe)})
+        output$app_title <- renderText({ i18n_r()$t(app$thumbnail_title) })
+        output$app_small_describe <- renderText({ i18n_r()$t(app$thumbnail_small_describe)})
       })
 
+
+
+      observeEvent(input$thumbnail, {
+
+        shiny::showModal(modalDialog(
+          easyClose=FALSE,
+          footer = NULL,
+          size = "xl",
+          tagList(
+
+            div(class="d-flex justify-content-center w-100 position-relative",
+                img(src=app$modal_img,
+                    class="card-img-top text-center",
+                    style="height:25em;"# width:10em;"
+                ),
+                div(class="position-absolute align-top", style="top:1em; width:100%;",
+                        tags$div(class="d-flex flex-row-reverse",
+                          tags$button(id=ns("exit_modal1"),type="button", class="btn-close btn-close-white action-button me-3", "data-bs-dismiss"="modal",'aria-label'="Close"))
+                    ),
+
+            ),
+
+
+            ### bouton de fermeture
+            #div(class="d-flex justify-content-end",
+            #    tags$div(tags$button(id=ns("exit_modal1"),type="button", class="btn-close action-button", "data-bs-dismiss"="modal",'aria-label'="Close"))),
+            # modal title
+            br(),
+          )
+          #title = i18n_r()$t(app$thumbnail_title) ,
+        ))
+      })
+
+
+
+      shinyjs::onclick("test",
+                       function(){
+                         print("A")
+                       })
 
   })
 }
