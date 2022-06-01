@@ -1,0 +1,27 @@
+{
+  "cultural_date_format": "%d-%m-%Y",
+  "languages": ["Français", "English", "Español"],
+  "translation": [
+      {
+        "Français": "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé.",
+        "English": "Space bringing together all the interfaces, developed by myself Julien MILON, around Data Sciences in Sport but also Health.",
+        "Español": "Espacio que reúne todas las interfaces desarrolladas por mí mismo Julien MILON en torno a las ciencias de datos en el deporte pero también en la salud."
+      },
+      {
+        "Français": "Mentions légales",
+        "English": "Legal mentions",
+        "Español": "Notas legales"
+      },
+      {
+        "Français": "Application 1 FR",
+        "English": "Application 1 EN",
+        "Español": "Application 1 ES"
+      },
+      {
+        "Français": "Test pour appli 1 FR",
+        "English": "Test pour appli 1 EN",
+        "Español": "Test pour appli 1 ES"
+      }
+
+    ]
+}

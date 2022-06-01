@@ -115,8 +115,6 @@ mod_app_global_server <- function(id, r){ #, result_auth
       observeEvent(input[["selected_language"]], {
         shiny.i18n::update_lang(session, input[["selected_language"]])
         i18n_r()$set_translation_language(input[["selected_language"]])
-        mod_store_server("store", r, i18n_r = i18n_r) #, result_auth , i18n_r = i18n_r
-
       })
 
 
@@ -126,6 +124,7 @@ mod_app_global_server <- function(id, r){ #, result_auth
       })
 
       #mod_store_server("store", r, i18n_r = i18n_r) #, result_auth
+      mod_store_server("store", r, i18n_r = i18n_r, input_app_global=input) #, result_auth , i18n_r = i18n_r
       mod_legal_mentions_server("legal_mentions", r) #, result_auth
 
 

@@ -22,10 +22,18 @@ app_server <- function(input, output, session) {
   #r$i18n$set_translation_language("Français")
 
 
-
+  ### Partie texte global Vitrine ====
   r$vitrine_title <- "jmilon-tech Store"
-  r$vitrine_small_description <- "Espace rassemblant l'ensemble des interfaces développées par moi-même Julien MILON autour des Data Sciences dans le Sport mais aussi la Santé."
+  r$vitrine_small_description <- "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé."
 
+  ### Partie application ====
+  # Application numéro 1
+  r$app1$img <- "www/Sans titre (2).png"
+  r$app1$title <- "Application 1 FR"
+  r$app1$small_describe <- "Test pour appli 1 FR"
+
+
+  ### Theme ====
   r$theme <- bslib::bs_theme(
     version=5,
     bootswatch = "flatly",
