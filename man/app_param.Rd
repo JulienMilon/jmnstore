@@ -9,8 +9,9 @@ app_param(
   thumbnail_title = NULL,
   thumbnail_small_describe = NULL,
   categorie = NULL,
-  modal_img = NULL,
-  modal_title = NULL
+  modal_img_cover = NULL,
+  modal_title = NULL,
+  modal_description = NULL
 )
 }
 \arguments{

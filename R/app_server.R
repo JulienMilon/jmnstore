@@ -27,11 +27,14 @@ app_server <- function(input, output, session) {
       ### App number 1
           ### Thumbnail
   r$app1 <- app_param(thumbnail_img = "www/Sans titre (2).png",
-                 thumbnail_title = "Application 1 FR",
-                 thumbnail_small_describe = "Test pour appli 1 FR",
+                 thumbnail_title = "Application Test V-FR",
+                 thumbnail_small_describe = "Test Petite description V-FR",
                  #categorie = c(1,2),
-                 modal_img = "www/chest_robot.jpg",
-                 modal_title = "Application 1 FR"
+                 modal_img_cover = "www/chest_robot.jpg",
+                 #modal_title = "Application 1 FR"
+                 modal_description = "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,
+                                       ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR."#,
+                 #modal_list_img =c()
   )
   #r$app1$thumbnail_title <- "Application 1 FR"
   #r$app1$thumbnail_small_describe <- "Test pour appli 1 FR"

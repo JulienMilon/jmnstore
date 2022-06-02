@@ -13,14 +13,19 @@
         "Español": "Notas legales"
       },
       {
-        "Français": "Application 1 FR",
-        "English": "Application 1 EN",
-        "Español": "Application 1 ES"
+        "Français": "Application Test V-FR",
+        "English": "Application Test V-EN",
+        "Español": "Application Test V-ES"
       },
       {
-        "Français": "Test pour appli 1 FR",
-        "English": "Test pour appli 1 EN",
-        "Español": "Test pour appli 1 ES"
+        "Français": "Test Petite description V-FR",
+        "English": "Test Petite description V-EN",
+        "Español": "Test Petite description V-ES"
+      },
+      {
+        "Français": "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR.",
+        "English": "Ceci est la description de l'application test V-EN, ceci est la description de l'application test V-EN,ceci est la description de l'application test V-EN,  ceci est la description de l'application test V-EN.",
+        "Español": "Ceci est la description de l'application test V-ES, ceci est la description de l'application test V-ES,ceci est la description de l'application test V-ES,  ceci est la description de l'application test V-ES."
       }
 
     ]

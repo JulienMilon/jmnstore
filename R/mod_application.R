@@ -55,7 +55,7 @@ mod_application_server <- function(id, r, i18n_r, app, input_app_global){ #, res
           tagList(
 
             div(class="d-flex justify-content-center w-100 position-relative",
-                img(src=app$modal_img,
+                img(src=app$modal_img_cover,
                     class="card-img-top text-center",
                     style="height:25em;"# width:10em;"
                 ),
@@ -64,6 +64,10 @@ mod_application_server <- function(id, r, i18n_r, app, input_app_global){ #, res
                           tags$button(id=ns("exit_modal1"),type="button", class="btn-close btn-close-white action-button me-3", "data-bs-dismiss"="modal",'aria-label'="Close"))
                     ),
 
+            ),
+            div(class="col 11 mx-4",
+                h5(i18n_r()$t(app$modal_title)),
+                div(i18n_r()$t(app$modal_description)),
             ),
 
 

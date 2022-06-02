@@ -16,8 +16,10 @@ app_param <- function(
     thumbnail_title = NULL,
     thumbnail_small_describe = NULL,
     categorie = NULL,
-    modal_img = NULL,
-    modal_title = NULL
+    modal_img_cover = NULL,
+    modal_title = NULL,
+    modal_description = NULL
+    modal_list_img = NULL
 
 ){
 
@@ -26,7 +28,8 @@ app_param <- function(
   if (is.null(thumbnail_title)){stop("A title is neccesary")}
   if (is.null(thumbnail_small_describe)){stop("A small description is neccesary")}
   #if (is.null(categorie)){stop("At least one category is neccesary : c()")}
-  if (is.null(modal_img)){stop("An image path is neccesary : www/...")}
+  if (is.null(modal_img_cover)){stop("An image path is neccesary : www/...")}
+  if (is.null(modal_description)){stop("A description is neccesary")}
 
 
   if (is.null(modal_title)){modal_title = thumbnail_title}
@@ -39,7 +42,10 @@ app_param <- function(
   app$thumbnail_title <- thumbnail_title
   app$thumbnail_small_describe <- thumbnail_small_describe
   app$categorie <- categorie
-  app$modal_img <- modal_img
+  app$modal_img_cover <- modal_img_cover
+  app$modal_title <- modal_title
+  app$modal_description <- modal_description
+  #app$modal_list_img <- modal_list_img
 
 
   return(app)
