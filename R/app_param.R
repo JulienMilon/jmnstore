@@ -18,7 +18,7 @@ app_param <- function(
     categorie = NULL,
     modal_img_cover = NULL,
     modal_title = NULL,
-    modal_description = NULL
+    modal_description = NULL,
     modal_list_img = NULL
 
 ){

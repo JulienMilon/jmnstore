@@ -32,8 +32,7 @@ app_server <- function(input, output, session) {
                  #categorie = c(1,2),
                  modal_img_cover = "www/chest_robot.jpg",
                  #modal_title = "Application 1 FR"
-                 modal_description = "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,
-                                       ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR."#,
+                 modal_description = "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR."#,
                  #modal_list_img =c()
   )
   #r$app1$thumbnail_title <- "Application 1 FR"
