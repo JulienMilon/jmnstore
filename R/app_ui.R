@@ -5,7 +5,9 @@
 #' @import shiny
 #' @import bslib
 #' @import shinybusy
-#'
+#' @import shiny.i18n
+#' @import googleLanguageR
+#' @import shinyjs
 #'
 #'
 #' @noRd

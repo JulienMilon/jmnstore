@@ -1,0 +1,32 @@
+{
+  "cultural_date_format": "%d-%m-%Y",
+  "languages": ["Français", "English", "Español"],
+  "translation": [
+      {
+        "Français": "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé.",
+        "English": "Space bringing together all the interfaces, developed by myself Julien MILON, around Data Sciences in Sport but also Health.",
+        "Español": "Espacio que reúne todas las interfaces desarrolladas por mí mismo Julien MILON en torno a las ciencias de datos en el deporte pero también en la salud."
+      },
+      {
+        "Français": "Mentions légales",
+        "English": "Legal mentions",
+        "Español": "Notas legales"
+      },
+      {
+        "Français": "Application Test V-FR",
+        "English": "Application Test V-EN",
+        "Español": "Application Test V-ES"
+      },
+      {
+        "Français": "Test Petite description V-FR",
+        "English": "Test Petite description V-EN",
+        "Español": "Test Petite description V-ES"
+      },
+      {
+        "Français": "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR.",
+        "English": "Ceci est la description de l'application test V-EN, ceci est la description de l'application test V-EN, ceci est la description de l'application test V-EN,  ceci est la description de l'application test V-EN.",
+        "Español": "Ceci est la description de l'application test V-ES, ceci est la description de l'application test V-ES, ceci est la description de l'application test V-ES,  ceci est la description de l'application test V-ES."
+      }
+
+    ]
+}

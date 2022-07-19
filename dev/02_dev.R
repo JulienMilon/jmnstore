@@ -22,6 +22,7 @@ attachment::att_amend_desc()
 golem::add_module(name = "app_global", with_test = TRUE) # Name of the module
 golem::add_module(name = "store", with_test = TRUE) # Name of the module
 golem::add_module(name = "legal_mentions", with_test = TRUE) # Name of the module
+golem::add_module(name = "application", with_test = TRUE) # Name of the module
 
 
 ## Add helper functions ----

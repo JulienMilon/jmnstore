@@ -10,19 +10,23 @@
 mod_app_global_ui <- function(id, r){
   ns <- NS(id)
 
+
+
   #logo en haut a gauche
   navbar_brand_html <- tags$span(class="navbar-brand primary",
 
                                   tags$span(tags$a(
                                     img(src="www/jmilon-tech_blanc.svg",
-                                        class="px-1",
-                                        style="height:2.1em;"),
+                                        class="px-1 pb-1",
+                                        style="height:2em;"),
                                  #   href = "https://www.sesan.fr/",
                                     target = "_blank"
                                   ))
   )
 
 
+  i18n <- golem::get_golem_options(which = "translator")
+  i18n$set_translation_language("Français")
 
 
   shiny::bootstrapPage(
@@ -30,6 +34,7 @@ mod_app_global_ui <- function(id, r){
     theme = r$theme,
     tags$head(tags$link(rel="shortcut icon", href="favicon.png")),
     tags$style(".btn-group {width: 100%;}"),
+
     shinydisconnect::disconnectMessage(
       text = paste0("Votre session ", r$app_title," a expir\u00e9"),
       refresh = "Rouvrir une session",
@@ -51,17 +56,40 @@ mod_app_global_ui <- function(id, r){
     tags$head(
       tags$style(".container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
      padding-left: 0px;
-     padding-right: 0px;}")
+     padding-right: 0px;}
+
+     .modal-body {
+            position: relative;
+            overflow-y: auto;
+            margin: 0 ;
+            padding: 0;
+      }
+      .modal-content{
+            padding: 0;
+            margin: 0;
+      }"
+                 )
     ),
 
 
+    usei18n(i18n),
 
     navbarPage(navbar_brand_html, #collapsible = TRUE, inverse = FALSE,
 
                tabPanel("Store", mod_store_ui(ns("store"), r)), #result_auth,
 
-               tabPanel("Mentions légales", mod_legal_mentions_ui(ns("legal_mentions"), r)), #result_auth,
+               tabPanel(i18n$t("Mentions légales"), mod_legal_mentions_ui(ns("legal_mentions"), r)), #result_auth,
 
+               bslib::nav_spacer(),
+                bslib::nav_item(
+                  div(class="d-inline-block me-4 align-items-center",style="width:10rem; height:2em;",
+                      selectInput(ns('selected_language'),
+                              NULL,
+                              choices = i18n$get_languages(),
+                              selected = i18n$get_key_translation())
+                      )
+
+                    )
                #bslib::nav_spacer(),
                # bslib::nav_item(tags$button(
                #   type="button",
@@ -87,12 +115,28 @@ mod_app_global_server <- function(id, r){ #, result_auth
 
       #authentifier::renderTool("adm_tool", result_auth = result_auth, r=r)
 
+
+      i18n <- golem::get_golem_options(which = "translator")
+      i18n$set_translation_language("Français")
+
+      i18n_r <- reactive({
+        i18n
+      })
+
+
+      observeEvent(input[["selected_language"]], {
+        shiny.i18n::update_lang(session, input[["selected_language"]])
+        i18n_r()$set_translation_language(input[["selected_language"]])
+      })
+
+
       # Deconnexion
       observeEvent(input$deconnexion_nav, {
         session$close()
       })
 
-      mod_store_server("store", r) #, result_auth
+      #mod_store_server("store", r, i18n_r = i18n_r) #, result_auth
+      mod_store_server("store", r, i18n_r = i18n_r, input_app_global=input) #, result_auth , i18n_r = i18n_r
       mod_legal_mentions_server("legal_mentions", r) #, result_auth
 
 
