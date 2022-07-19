@@ -26,7 +26,7 @@ app_server <- function(input, output, session) {
 
       ### App number 1
           ### Thumbnail
-  r$app1 <- app_param(thumbnail_img = "www/Sans titre (2).png",
+  r$app1 <- app_param(thumbnail_img = "www/vignette_img.png",
                  thumbnail_title = "Application Test V-FR",
                  thumbnail_small_describe = "Test Petite description V-FR",
                  #categorie = c(1,2),

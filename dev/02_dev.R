@@ -16,6 +16,12 @@
 ## Dependencies ----
 ## Amend DESCRIPTION with dependencies read from package code parsing
 attachment::att_amend_desc()
+usethis::use_package("bslib")
+usethis::use_package("shinybusy")
+usethis::use_package("shinydisconnect")
+usethis::use_package("shiny.i18n")
+usethis::use_package("shinyjs")
+
 
 ## Add modules ----
 ## Create a module infrastructure in R/

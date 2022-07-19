@@ -1,11 +1,13 @@
 #' init necessary parameter compilation to launch an app with authentification + account management
 #'
-#' @param thumbnail_img Path of the image in thumbnail
-#' @param thumbnail_title Title of the thumbnail
-#' @param thumbnail_small_describe
-#' @param categorie
-#' @param modal_img
-#' @param modal_title
+#' @param thumbnail_img Path of the image in thumbnail.
+#' @param thumbnail_title Title of the thumbnail.
+#' @param thumbnail_small_describe Small description of the thumbnail.
+#' @param categorie Categorie of the application.
+#' @param modal_img_cover Image cover of the modal
+#' @param modal_title Title of the application in the modal
+#' @param modal_description Description of the application in the modal
+#' @param modal_list_img List of small images of the application
 #'
 #' @return an error if provided information are incorrect a init function to launch in the app server part if success
 #' @export

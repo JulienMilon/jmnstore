@@ -3,6 +3,10 @@
 #' @description A shiny Module.
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
+#' @param r Dataset. containing app global parameters, theme, app information (img, title)
+#' @param i18n_r Dataset. Translation system
+#' @param input_app_global List. Input list of mod_app_global_ui for Language selector input
+#' @param app Dataset. Application information (Titles, descriptions, images)
 #'
 #' @noRd
 #'

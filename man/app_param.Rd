@@ -16,11 +16,21 @@ app_param(
 )
 }
 \arguments{
-\item{thumbnail_img}{Path of the image in thumbnail}
+\item{thumbnail_img}{Path of the image in thumbnail.}
 
-\item{thumbnail_title}{Title of the thumbnail}
+\item{thumbnail_title}{Title of the thumbnail.}
 
-\item{modal_title}{}
+\item{thumbnail_small_describe}{Small description of the thumbnail.}
+
+\item{categorie}{Categorie of the application.}
+
+\item{modal_img_cover}{Image cover of the modal}
+
+\item{modal_title}{Title of the application in the modal}
+
+\item{modal_description}{Description of the application in the modal}
+
+\item{modal_list_img}{List of small images of the application}
 }
 \value{
 an error if provided information are incorrect a init function to launch in the app server part if success

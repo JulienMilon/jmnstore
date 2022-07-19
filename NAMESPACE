@@ -3,7 +3,6 @@
 export(app_param)
 export(run_app)
 import(bslib)
-import(googleLanguageR)
 import(shiny)
 import(shiny.i18n)
 import(shinybusy)

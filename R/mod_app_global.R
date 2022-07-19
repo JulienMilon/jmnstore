@@ -2,7 +2,8 @@
 #'
 #' @description A shiny Module.
 #'
-#' @param id,input,output,session Internal parameters for {shiny}.
+#' @param id,input,output,session, Internal parameters for {shiny}.
+#' @param r Dataset. containing app global parameters, theme, app information (img, title)
 #'
 #' @noRd
 #'
