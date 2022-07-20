@@ -27,7 +27,7 @@ mod_app_global_ui <- function(id, r){
 
 
   i18n <- golem::get_golem_options(which = "translator")
-  i18n$set_translation_language("Français")
+  i18n$set_translation_language("English")
 
 
   shiny::bootstrapPage(
@@ -79,7 +79,7 @@ mod_app_global_ui <- function(id, r){
 
                tabPanel("Store", mod_store_ui(ns("store"), r)), #result_auth,
 
-               tabPanel(i18n$t("Mentions légales"), mod_legal_mentions_ui(ns("legal_mentions"), r)), #result_auth,
+               tabPanel("Mentions l\u00e9gales", mod_legal_mentions_ui(ns("legal_mentions"), r)), #result_auth,
 
                bslib::nav_spacer(),
                 bslib::nav_item(
@@ -118,7 +118,7 @@ mod_app_global_server <- function(id, r){ #, result_auth
 
 
       i18n <- golem::get_golem_options(which = "translator")
-      i18n$set_translation_language("Français")
+      i18n$set_translation_language("English")
 
       i18n_r <- reactive({
         i18n

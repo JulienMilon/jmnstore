@@ -1,9 +1,12 @@
 Package: jmnstore
 Title: store
 Version: 0.0.0.9000
-Authors@R: person('Julien', 'MILON', email = 'julien.milon@mines-ales.org', role = c('cre', 'aut'))
+Authors@R: 
+    person("Julien", "MILON", , "julien.milon@mines-ales.org", role = c("cre", "aut"))
 Description: App store for interface and application of jmilon-tech.
 License: MIT + file LICENSE
+URL: https://store.jmilon-tech.fr
+BugReports: https://store.jmilon-tech.fr/issues
 Imports: 
     bslib,
     config (>= 0.3.1),
@@ -13,11 +16,9 @@ Imports:
     shinybusy,
     shinydisconnect,
     shinyjs
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.2.0
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://store.jmilon-tech.fr
-BugReports: https://store.jmilon-tech.fr/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.0

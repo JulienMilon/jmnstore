@@ -20,19 +20,19 @@ app_server <- function(input, output, session) {
 
   ### Global text showcase part ====
   r$showcase_title <- "jmilon-tech Store"
-  r$showcase_small_description <- "Espace rassemblant l'ensemble des interfaces, développées par moi-même Julien MILON, autour des Data Sciences dans le Sport mais aussi la Santé."
+  r$showcase_small_description <- "Space bringing together all the interfaces, developed by myself Julien MILON, around Data Sciences in Sport but also Health."
 
   ### App part ====
 
       ### App number 1
           ### Thumbnail
   r$app1 <- app_param(thumbnail_img = "www/vignette_img.png",
-                 thumbnail_title = "Application Test V-FR",
-                 thumbnail_small_describe = "Test Petite description V-FR",
+                 thumbnail_title = "Application Test V-EN",
+                 thumbnail_small_describe = "Test Petite description V-EN",
                  #categorie = c(1,2),
                  modal_img_cover = "www/chest_robot.jpg",
                  #modal_title = "Application 1 FR"
-                 modal_description = "Ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR, ceci est la description de l'application test V-FR,  ceci est la description de l'application test V-FR."#,
+                 modal_description = "Ceci est la description de l'application test V-EN, ceci est la description de l'application test V-EN, ceci est la description de l'application test V-EN,  ceci est la description de l'application test V-EN."#,
                  #modal_list_img =c()
   )
   #r$app1$thumbnail_title <- "Application 1 FR"
